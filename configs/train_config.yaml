@@ -1,0 +1,9 @@
+data:
+  images: "../data/images"
+  annotations: "../data/annotations"
+
+training:
+  batch_size: 4
+  lr: 0.005
+  epochs: 12
+  ckpt_dir: "../weights"
