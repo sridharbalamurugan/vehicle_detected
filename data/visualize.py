@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 # Path to annotation folder
-annotations = r"D:\projects\vehicle_detection\data\annotations" # change to your folder
+annotations = r"D:\projects\vehicle_detection\data\test\annotations" 
 classes = ['car', 'bus', 'truck', 'bike']
 class_counts = Counter()
 widths, heights, areas = [], [], []
@@ -21,7 +21,7 @@ for xml_file in os.listdir(annotations):
         if label in classes:
             class_counts[label] += 1
             
-            # Bounding box
+           
             bbox = obj.find("bndbox")
             xmin = int(bbox.find("xmin").text)
             ymin = int(bbox.find("ymin").text)

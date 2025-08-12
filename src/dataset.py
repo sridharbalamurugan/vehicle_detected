@@ -1,4 +1,3 @@
-# D:\projects\vehicle_detection\src\dataset.py
 import os
 import random
 import xml.etree.ElementTree as ET
@@ -145,18 +144,13 @@ class Compose:
             image, target = t(image, target)
         return image, target
 
+
 def get_transform(train):
-    """
-    Returns a Compose(transform_list) where ToTensor() is last.
-    This ensures RandomHorizontalFlip works on PIL Image (or tensors too).
-    """
-    t = []
-    if train:
-        t.append(RandomHorizontalFlip(0.5))  # flip while image still PIL (or handles tensor)
-    t.append(ToTensor())
+    t = [ToTensor()]
     return Compose(t)
 
 
-# --- helper collate function for DataLoader ---
+
+
 def collate_fn(batch):
     return tuple(zip(*batch))

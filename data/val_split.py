@@ -34,4 +34,4 @@ for img_file in val_files:
     if os.path.exists(src_ann_path):
         shutil.move(src_ann_path, dst_ann_path)
 
-print(f"✅ Moved {len(val_files)} images and annotations to validation set.")
+print(f" Moved {len(val_files)} images and annotations to validation set.")

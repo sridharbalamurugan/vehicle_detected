@@ -1,0 +1,62 @@
+# src.train.py ---> output
+
+Epoch 1 starting...
+  Batch 1, Loss: 2.1011
+  Batch 2, Loss: 2.3794
+  Batch 3, Loss: 2.0661
+  Batch 4, Loss: 1.9368
+  Batch 5, Loss: 1.4712
+  Batch 6, Loss: 0.5427
+  Batch 7, Loss: 0.5549
+  Batch 8, Loss: 1.7027
+  Batch 9, Loss: 0.5831
+  Batch 10, Loss: 0.9338
+Epoch [1/2] Training Loss: 14.2716
+Evaluating on validation set...
+Total TP: 96, Total FP: 120, Total FN: 2
+Overall Precision: 44.44%
+Overall Recall: 97.96%
+Validation Precision: 37.92%
+Validation Recall: 76.00%
+Epoch 2 starting...
+  Batch 1, Loss: 0.8506
+  Batch 2, Loss: 1.5992
+  Batch 3, Loss: 0.6000
+  Batch 4, Loss: 1.0647
+  Batch 5, Loss: 0.8293
+  Batch 6, Loss: 0.4879
+  Batch 7, Loss: 0.5900
+  Batch 8, Loss: 1.5803
+  Batch 9, Loss: 1.5896
+  Batch 10, Loss: 1.4817
+Epoch [2/2] Training Loss: 10.6735
+Evaluating on validation set...
+Total TP: 94, Total FP: 139, Total FN: 1
+Overall Precision: 40.34%
+Overall Recall: 98.95%
+Validation Precision: 32.31%
+Validation Recall: 80.00%
+Training complete.
+Evaluating on test set...
+Total TP: 0, Total FP: 6596, Total FN: 0
+Overall Precision: 0.00%
+Overall Recall: 0.00%
+
+
+Epoch	TP	FP	 FN
+1	    96	120	 2
+2	    94	139	 1
+
+
+Accuracy =  TP/TP+FP+FN
+
+Epoch 1:
+Accuracy =  96/96+120+02 = 0.4404 = 44.04%
+
+​
+Epoch 2:
+Accuracy = 94/94+139+1= 94/234 = 0.4017 = 40.17%
+
+Epoch	Accuracy (%)	Precision (%)	Recall (%)
+1	    44.04	        44.44	        97.96
+2	    40.17	        40.34	        98.95
